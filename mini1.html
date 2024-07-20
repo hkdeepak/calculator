@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calclator</h2>
+    enter 1st number:<input type="numbrer" id="fst"><br><br>
+    enter 2nd number:<input type="number" id="snd"><br><br>
+    <label for="chose anyone">chose any one=</label><select name="operation" id="ch">
+        <option value="+">add:+</option>
+        <option value="-">sub:-</option>
+        <option value="*">mul:*</option>
+        <option value="/">div:/</option>
+    </select><br><br>
+    <input type="submit" vlaue="submit" onclick="cal()">
+  <input type="text" id="res">    
+</body>
+<script>
+    function cal(){
+    let fst=document.getElementById("fst").value;
+    let snd=document.getElementById("snd").value;
+    let ch=document.getElementById("ch").value;
+    
+    if(ch=='+')
+    var res=parseInt(fst)+parseInt(snd);
+    if(ch=='-')
+    var res=parseInt(fst)-parseInt(snd);
+    if(ch=='*')
+    var res=parseInt(fst)*parseInt(snd);
+    if(ch=='/')
+    var res=parseInt(fst)/parseInt(snd);
+    document.getElementById("res").value=res;
+
+    } 
+    </script>
+</html>
